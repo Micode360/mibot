@@ -31,6 +31,9 @@ const network = 'http://localhost:5000/botdata/data';
 
                 obj[0].question.forEach(item=>{
                     trigger.push(item);
+                    item.forEach(item=>{
+                        tipsTags(item);
+                    });
                 })
 
                 obj[0].question.forEach(item=>{
@@ -43,18 +46,28 @@ const network = 'http://localhost:5000/botdata/data';
             }
 
 
+            //Haburger
+            const burger = document.querySelector('.right-burger');
+            const ul = document.querySelector('.ul');
+
+            burger.addEventListener("click", ()=>{
+                ul.classList.toggle("ul-out");
+            });
+
 //function for tips: STILL ONPROGRESS.
 
 var tips = [];
 console.log(tips);
 
-function tipsTags(quest){
-    quest.forEach(item => {
-        return item;
-    });
+const tipsTags = (quest) => {
+    const li = document.createElement('li');
+    li.className = "tips-content";
+    li.textContent = quest;
+    document.querySelector(".ul").appendChild(li);
+
 }
 
-console.log(tipsTags(tips));
+
 
 
 //Json in trigger
@@ -64,15 +77,13 @@ var trigger = [];
 var reply = [];
 
 
-var alternative = ["Come again", "I don't get please reply again"]
+var alternative = ["Come again", "I don't get it. Please reply again"]
 document.querySelector('#input').addEventListener("keypress", function(e){  
         var key = e.which || e.keyCode;
         if(key === 13){
             var input = document.getElementById("input").value;
             document.getElementById('user').innerHTML = input;
             output(input); 
-        }else if(input){
-            const chatbotView =  document.querySelector(".chatbot-output").innerHTML =" "; 
         }
 });
 
@@ -92,7 +103,6 @@ const output = (input) => {
         setTimeout(() => {
             document.getElementById('chatbot').innerHTML = product; 
         }, 2000);
-        //speak(product);
         document.getElementById("input").value = "";
 }
 function compare(arr, array, string){
@@ -108,15 +118,6 @@ function compare(arr, array, string){
     return item;
 }
 
-
-// const  observeMachine = () => {
-  
-
-// }
-
-
-
-//chatbotView.addEventListener("")
 
 
 

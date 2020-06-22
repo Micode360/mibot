@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIBOT</title>
+    <link rel="shortcut icon" href="./images/bot_logo.png" type="image/png">
     <link rel="stylesheet" href="css/main.css">
+    <!-- FONT AWESOME CDN LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500&display=swap" rel="stylesheet">
              
 </head>
 <body>
    
-  <div id="main">
-   
-  </div>
+
+
 
   <div class="container">
-    <div class="morphism-3 enlighten"></div>
+    <div class="logo enlighten"></div>
     <div class="min-container">
         <div><span class="chabot-output" id="chatbot"></span></div>
-        <div><span id="user"></span></div>
-        <div><input class="myInput" id="input" type="text" placeholder="say anything..." autocomplete="off"></div>
+        <div><span class="user" id="user"></span></div>
+        <div><input class="myInput" id="input" type="text" placeholder="Say anything..." autocomplete="off"></div>
     </div>
+
+    <div class="container">
+        <li class="right-burger">
+            <a id="burger" href="javascript:void(0);"  onclick="hamburgerFunction()"><i class="fa fa-bars logo-burger" aria-hidden="true"></i></a>
+          </li> 
+        <ul class="ul"> </ul>
+    </div>
+   
 </div>
 
     <script src="js/code.js"></script>

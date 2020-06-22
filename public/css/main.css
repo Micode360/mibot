@@ -8,6 +8,7 @@ body{
     font-weight: lighter;
     color: #eee;
     font-size: 25px;
+    overflow: hidden;
 }
 
 .container{
@@ -15,9 +16,8 @@ body{
     justify-content: center;
     text-align: center;
     grid-template-rows: 1fr;
-    padding: 30px;
     background-attachment: fixed;
-    height: 95vh;
+    height: 102vh;
     background: #112764;
 }
 
@@ -34,8 +34,101 @@ body{
 }
 
 
+.ul{
+    background-color: rgba(29, 19, 19, 0.438);
+    text-align: center;
+    position: absolute;
+    padding-left: 12px;
+    top:0;
+    left:-300px;
+    bottom: -20%;
+    overflow-y: scroll;
+    padding-top: 120px;
+    transform: translate(-5%, -10%);
+    display: block;
+    transition: left 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.ul-out{
+    left: 0;
+}
 
-.morphism-3{
+        .ul::-webkit-scrollbar {
+            background: rgba(11, 18, 29, 0);
+        }
+
+        ::-webkit-scrollbar {
+            background: rgb(25, 28, 34);
+            width: 10px;
+            padding: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(transparent,   rgb(64, 163, 6));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(transparent, rgb(16, 49, 41));
+        }
+
+/*li*/
+.tips-content{
+    background: rgba(27, 18, 18, 0.438);
+    font-size: 15px;
+    font-weight: 300;
+    list-style: none;
+    color: #eee;
+    margin: 5px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.tips-content:hover{
+    background-color: rgba(64, 163, 6, 0.233);
+}
+
+
+/*Hamburger*/
+.right-burger{
+    position: absolute;
+    font-size: 30px;
+    top: 2%;
+    left:1.8%;
+    z-index: 1;
+    list-style: none;
+    }
+
+    #burger{
+        color: #eee;
+    }
+    #burger:hover{
+        color: #0dff0d81;
+    }
+
+    #burger:active{
+        color: #0dff0d81;
+    }
+
+    /*output*/
+    .user{
+        transition: 3s;
+        animation-duration: 3s;
+        animation-name: fade;
+    }
+
+    @keyframes fade{
+        0%{
+            display: none;
+        }
+        100%{
+            display: block;
+        }
+    }
+
+
+
+.logo{
     position: fixed;
     top:5%;
     left:50%;
@@ -52,7 +145,7 @@ body{
 }
 
 
-.morphism-3::after{
+.logo::after{
     content: '';
     position: absolute;
     height: 200px;
@@ -71,23 +164,16 @@ body{
     font-size: 25px;
     background: none;
     outline: none;
-    padding: 4px;
+    padding: 8px;
     border: none;
     border-bottom: 2px solid #eee;
 }
 
-.enlighten{
-    /* border-radius: 50px;
-background: #590230; */
-box-shadow: outset -22px 22px 44px #4c0229, 
-             22px -22px 44px #660237 ;
-}
 
 
+@media(max-width: 300px){
 
-
-@media(min-width: 800px){
-    .morphism-1{
+    .logo{
         border-radius: 111px;
 background: #112764;
 box-shadow:  12px 12px 24px #0e1f50, 
@@ -105,19 +191,26 @@ box-shadow:  12px 12px 24px #0e1f50,
     
 
 
-    .morphism-3{
+    .logo{
         position: fixed;
-        top:5%;
+        top:9%;
         left:50%;
         transform: translate(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 250px;
-        width: 250px;
         border-radius: 111px;
         background: #112764;
         box-shadow:  12px 12px 24px #0e1f50, 
                      -12px -12px 24px #142f78;
+    }
+
+    .right-burger{
+        top:2%;
+        left: 6%;
+    }
+
+    .myInput{
+        width: 240px;
     }
 }
