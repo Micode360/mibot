@@ -25,7 +25,7 @@ body{
     margin-bottom: 35px;
 }
 
-.min-contanier{
+.min-container{
     text-align: center;
     position: fixed;
     top:80%;
@@ -76,6 +76,13 @@ body{
     border-bottom: 2px solid #eee;
 }
 
+.enlighten{
+    /* border-radius: 50px;
+background: #590230; */
+box-shadow: outset -22px 22px 44px #4c0229, 
+             22px -22px 44px #660237 ;
+}
+
 
 
 
@@ -85,5 +92,32 @@ body{
 background: #112764;
 box-shadow:  12px 12px 24px #0e1f50, 
              -12px -12px 24px #142f78;
+    }
+
+    
+    .min-container{
+        text-align: center;
+        position: fixed;
+        top:80%;
+        left:50%;
+        transform: translate(-50%, -80%);
+    }
+    
+
+
+    .morphism-3{
+        position: fixed;
+        top:5%;
+        left:50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        width: 250px;
+        border-radius: 111px;
+        background: #112764;
+        box-shadow:  12px 12px 24px #0e1f50, 
+                     -12px -12px 24px #142f78;
     }
 }

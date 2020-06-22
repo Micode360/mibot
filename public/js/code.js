@@ -33,10 +33,28 @@ const network = 'http://localhost:5000/botdata/data';
                     trigger.push(item);
                 })
 
+                obj[0].question.forEach(item=>{
+                    tips.push(item);
+                })
+
                 obj[0].answer.forEach(item=>{
                     reply.push(item);
                 })
             }
+
+
+//function for tips: STILL ONPROGRESS.
+
+var tips = [];
+console.log(tips);
+
+function tipsTags(quest){
+    quest.forEach(item => {
+        return item;
+    });
+}
+
+console.log(tipsTags(tips));
 
 
 //Json in trigger
@@ -47,12 +65,14 @@ var reply = [];
 
 
 var alternative = ["Come again", "I don't get please reply again"]
-document.querySelector('#input').addEventListener("keypress", function(e){
+document.querySelector('#input').addEventListener("keypress", function(e){  
         var key = e.which || e.keyCode;
         if(key === 13){
             var input = document.getElementById("input").value;
             document.getElementById('user').innerHTML = input;
             output(input); 
+        }else if(input){
+            const chatbotView =  document.querySelector(".chatbot-output").innerHTML =" "; 
         }
 });
 
@@ -89,8 +109,14 @@ function compare(arr, array, string){
 }
 
 
+// const  observeMachine = () => {
+  
+
+// }
 
 
+
+//chatbotView.addEventListener("")
 
 
 
