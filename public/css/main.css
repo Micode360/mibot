@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: roboto;
+    font-weight: lighter;
+    color: #eee;
+    font-size: 25px;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 1fr;
+    padding: 30px;
+    background-attachment: fixed;
+    height: 95vh;
+    background: #112764;
+}
+
+.container div{
+    margin-bottom: 35px;
+}
+
+.min-contanier{
+    text-align: center;
+    position: fixed;
+    top:80%;
+    left:50%;
+    transform: translate(-50%, -80%);
+}
+
+
+
+.morphism-3{
+    position: fixed;
+    top:5%;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border-radius: 111px;
+    background: #112764;
+    box-shadow:  12px 12px 24px #0e1f50, 
+                 -12px -12px 24px #142f78;
+}
+
+
+.morphism-3::after{
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 111px;
+    background: #112764;
+    box-shadow:  inset 12px 12px 24px #0e1f50, 
+                 -12px -12px 24px #142f78;
+}
+
+
+.myInput{
+    font-family: roboto;
+    font-weight: lighter;
+    color: #eee;
+    font-size: 25px;
+    background: none;
+    outline: none;
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid #eee;
+}
+
+
+
+
+@media(min-width: 800px){
+    .morphism-1{
+        border-radius: 111px;
+background: #112764;
+box-shadow:  12px 12px 24px #0e1f50, 
+             -12px -12px 24px #142f78;
+    }
+}
