@@ -1,4 +1,4 @@
-const network = 'http://localhost:5000/botdata/data';
+const network = 'https://hngmicodechatbot.herokuapp.com/botdata/data';
 
         //PART 1
         const status = response => {
