@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family:Arima Madurai;
+}
+
+.container{
+  background: rgb(242,242,242);
+  background: radial-gradient(circle, rgba(242,242,242,1) 73%, rgba(226,224,224,1) 100%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+
+.quote{
+    position: fixed;
+    top: 195px;
+    right: 252px;
+    transform: scale(2.4);
+    z-index: 0;
+}
+
+
+#quote-box{
+  background: #f2f2f2;
+  padding: 40px;
+  border-radius:4px;
+  width:600px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-radius: 7px;
+  background: #f2f2f2;
+  box-shadow:  7px 7px 6px #bdbdbd, 
+               -7px -7px 6px #ffffff;
+}
+
+
+
+#quote-box div:nth-of-type(1){
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#quote-box span{
+  padding: 10px;
+}
+
+#text{
+  font-family: Arima Madurai;
+  font-size: 28px;
+  font-weight: 900;
+  color: rgb(41, 41, 65);
+  text-align: left;
+}
+
+#author{
+  font-family: Arima Madurai;
+  float: right;
+  color: rgba(45, 45, 73, 0.726);
+}
+
+.button-column{
+  position: relative;
+  margin-top:70px;
+}
+
+#new-quote{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  outline: none;
+  background: rgb(41, 41, 65);
+  padding: 12px 22px;
+  font-family: Roboto Light;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+  color: #eee;
+  margin-left: 400px;
+}
+
+#new-quote:hover{
+    background: rgb(24, 24, 39);
+  transition: 0.9s;
+}
+
+
+
+
+#tweet-quote{
+  background: rgb(41, 41, 65);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  font-family: Roboto Light;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+  color: #eee;
+}
+
+.fa-twitter-square {
+  font-size: 30px;
+  margin: 5px 4px;
+  color:#eee;
+}
+ 
+.fa-twitter-square:hover, #tweet-quote:hover{
+  color: rgb(240, 230, 142);
+  background: rgb(24, 24, 39);
+  transition: 0.9s;
+}
+
+@media(max-width:711px){
+  #quote-box{
+    width: 500px;
+  }
+}
+
+@media(max-width:606px){
+  #quote-box{
+    width: 400px;
+  }
+}
+
+
+@media(max-width:450px){
+  #quote-box{
+    width: 300px;
+  }
+}
+
+@media(max-width:410px){
+  #quote-box{
+    width: 200px;
+  }
+
+  #text{
+    font-size: 18px;
+  }
+}
+
+@media(max-width:300px){
+  #quote-box{
+    width: 200px;
+    padding: 20px;
+  }
+
+  #text{
+    font-size: 18px;
+  }
+
+  #new-quote{
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  .fa-twitter-square {
+    font-size: 28px;
+    margin: 5px 4px;
+  }
+}
